@@ -10,8 +10,16 @@ CHAT_ID = os.environ.get("CHAT_ID")
 bot = telegram.Bot(token=TOKEN)
 bot.send_message(chat_id=CHAT_ID, text="🤖 Bot ONLINE e collegato a Telegram!")
 print("Bot avviato e messaggio inviato")
-KEYWORDS = ["air force", "dunk", "air max", "tn", "campus", "samba", "gazelle", "530", "550", "2002"]
-MAX_PRICE = 40
+KEYWORDS = [
+    "nike tech",
+    "nike tn",
+    "air max",
+    "nike hoodie",
+    "tuta nike",
+    "giubbotto nike"
+]
+
+MAX_PRICE = 25
 
 def extract_price(text):
     import re
@@ -37,7 +45,7 @@ def check_site():
 while True:
     try:
         check_site()
-        time.sleep(300)
+        time.sleep(120)
     except Exception as e:
         print(e)
         time.sleep(60)
