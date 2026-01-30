@@ -8,7 +8,8 @@ TOKEN = os.environ.get("BOT_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 
 bot = telegram.Bot(token=TOKEN)
-
+bot.send_message(chat_id=CHAT_ID, text="🤖 Bot ONLINE e collegato a Telegram!")
+print("Bot avviato e messaggio inviato")
 KEYWORDS = ["air force", "dunk", "air max", "tn", "campus", "samba", "gazelle", "530", "550", "2002"]
 MAX_PRICE = 40
 
